@@ -29,7 +29,8 @@
 }
 
 .sideBar-close {
-	margin-top: 20px;
-	position: relative;
-	overflow: hidden;
+  margin-top: 20px;
+  position: absolute;
+  overflow: hidden;
+  right: 20px;
 }

@@ -22,19 +22,3 @@
 .menu-li + .menu-li {
 	padding-top: 15px;
 }
-
-.menu_active {
-	&:before {
-		content: "";
-		border-top: 5px solid #fff;
-		width: 12px;
-		display: block;
-		position: relative;
-		top: 15px;
-		left: -20px;
-	}
-}
-
-.menu-li.menu_active {
-	padding-left: 20px;
-}

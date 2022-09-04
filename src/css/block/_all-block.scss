@@ -1,0 +1,328 @@
+@import "../sprite";
+@import "../misc/bootstrap";
+
+hr {
+  margin: 10px 0;
+}
+
+/*Общие границы*/
+.block-wide {
+  max-width: 90%;
+  width: 96%;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+}
+
+/*Общие границы*/
+
+/*Тайтл*/
+.block-title {
+  h1 {
+    text-align: center;
+  }
+}
+
+/*Тайтл*/
+
+/*Обложка*/
+.block-img {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/*Обложка*/
+
+/*Блок со стики, но стики не работает тут что-то*/
+.block-company {
+  .company {
+    position: relative;
+    z-index: 1;
+  }
+
+  .company-content {
+    display: flex;
+    justify-content: center;
+
+    @include media-max(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .company_top {
+    margin-top: 80px;
+
+    @include media-max(md) {
+      margin-top: 40px;
+    }
+  }
+
+  .company-img {
+
+    img {
+      width: 462px;
+      height: 800px;
+      display: block;
+      @include media-max(xl) {
+        width: 385px;
+        height: 650px;
+      }
+      @include media-max(lg) {
+        width: 315px;
+        height: 585px;
+      }
+
+      @include media-max(sm) {
+        width: 250px;
+        height: 433px;
+      }
+    }
+  }
+
+  .company-text {
+    position: sticky;
+    top: 40px;
+    height: 100%;
+    max-width: 480px;
+    margin-left: 50px;
+
+    @include media-max(md) {
+      margin-left: 0;
+      margin-top: 30px;
+      max-width: 100%;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+
+
+  }
+
+  .company-title-text {
+
+    margin-bottom: 25px;
+
+    p {
+      span {
+
+        display: block;
+      }
+    }
+  }
+}
+
+/*Блок со стики*/
+
+/*Просто кнопка*/
+.block-button {
+  text-align: center;
+
+  button {
+    font-size: 16px;
+    color: white;
+    background: #000;
+    padding: 10px 20px;
+
+    &:hover {
+      background: red;
+
+    }
+  }
+}
+
+/*Просто кнопка*/
+
+/*Кнопка с модалкой*/
+.block-buttonModal {
+  text-align: center;
+
+  a {
+    font-size: 16px;
+    color: white;
+    background: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      background: red;
+
+    }
+  }
+}
+
+/*Кнопка с модалкой*/
+
+/*Модалка*/
+.rightSideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  z-index: 999;
+  transition: all .3s;
+
+}
+
+.rightSideBar-content {
+  width: 100%;
+  max-width: 850px;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    position: relative;
+  }
+}
+
+.rightSideBar_width {
+  max-width: 975px;
+}
+
+
+.rightSideBar_visible {
+  transform: translateX(0);
+}
+
+.rightSideBar-close {
+  margin: 30px;
+  position: fixed;
+  overflow: initial;
+  cursor: pointer;
+  right: 0;
+  display: block;
+  background-image: url("../img/close2.png");
+  width: 28px;
+  height: 29px;
+}
+
+/*Модалка*/
+
+/*Стили внутри модалки*/
+.customForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  @media screen and (max-width: 414px) {
+    height: auto;
+  }
+
+  form {
+    width: 568px;
+    margin: 0;
+  }
+
+  .form-content {
+    @media screen and (max-width: 414px) {
+      height: 100%;
+      padding: 60px 0 25px;
+    }
+  }
+
+  .form-text {
+    margin-top: 0;
+    margin-bottom: 80px;
+    max-width: 568px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-text3 {
+    margin-top: 180px;
+    margin-bottom: 30px;
+    max-width: 568px;
+
+  }
+
+  .form-control {
+    border: 1px solid #E2E2E2;
+    border-radius: 0;
+    height: 50px;
+    padding: 0 25px;
+    background: #FAFAFA;
+    color: #B8B8B8;
+    font-size: 18px;
+
+    &::placeholder {
+      color: #747474;
+    }
+
+    &:focus {
+      color: #747474;
+      background-color: #FAFAFA;
+      border-color: #747474;
+      outline: none;
+      box-shadow: none;
+    }
+
+    @media (max-width: 576px) {
+      padding: .375rem 0.75rem;
+    }
+  }
+
+  .form-form {
+    width: 100%;
+  }
+
+  .form-title {
+    font-size: 30px;
+
+    + .form-title {
+      margin-top: 25px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  .form-politics {
+    p {
+      color: #7B7B7B;
+    }
+
+    a {
+      color: #7B7B7B;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+        transition: all .2s;
+      }
+    }
+  }
+
+  .form-button {
+    margin-top: 35px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 576px) {
+    width: 94%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+/*Стили внутри модалки*/
